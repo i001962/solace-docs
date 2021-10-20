@@ -2,53 +2,54 @@
 
 
 ## Functions
-### coins
+### allPairsLength
 ```solidity
-  function coins(
-  ) external returns (address coin)
+  function allPairsLength(
+  ) external returns (uint256 pools)
 ```
-Returns the coin address of the given coin index.
+Returns `LP Pool` length.
 
 
 
 #### Return Values:
 | Name                           | Type          | Description                                                                  |
 | :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
-|`coin`| uint256 | The coin address.
-### add_liquidity
+|`pools`|  | The number of pools.
+### allPairs
 ```solidity
-  function add_liquidity(
-    uint256[] amounts,
-    uint256 minMintAmount
-  ) external
+  function allPairs(
+    uint256 pairIndex
+  ) external returns (address pair)
 ```
-Adds liquidity to pool.
+Returns `LP Pool` address.
 
 
 #### Parameters:
 | Name | Type | Description                                                          |
 | :--- | :--- | :------------------------------------------------------------------- |
-|`amounts` | uint256[] | The liquidity amount for each token in the pool.
-|`minMintAmount` | uint256 | The minumum pool lp token mint threshold.
-
-### calc_withdraw_one_coin
-```solidity
-  function calc_withdraw_one_coin(
-    uint256 tokenAmount,
-    int128 i
-  ) external returns (uint256 amount)
-```
-Calculates the witdraw amount for given `amount` and `coin`.
-The given coin index must be valid for the pool.
-
-
-#### Parameters:
-| Name | Type | Description                                                          |
-| :--- | :--- | :------------------------------------------------------------------- |
-|`tokenAmount` | uint256 | The balance of the user in the pool.
-|`i` | int128 | The coin index.
+|`pairIndex` | uint256 | The index of the lp pair.
 
 #### Return Values:
 | Name                           | Type          | Description                                                                  |
 | :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
-|`amount`| uint256 | The withdraw amount.
+|`pair`| uint256 | The address of the lp pair.
+### getPair
+```solidity
+  function getPair(
+    address token0,
+    address token1
+  ) external returns (address pair)
+```
+Gets the `LP Pool` for given input pair `token0` and `token1`
+
+
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`token0` | address | The pair first token.
+|`token1` | address | The pair second token.
+
+#### Return Values:
+| Name                           | Type          | Description                                                                  |
+| :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
+|`pair`| address | The address of the pair.
