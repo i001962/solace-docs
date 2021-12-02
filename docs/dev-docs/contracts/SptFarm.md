@@ -1,14 +1,14 @@
-Rewards [**Policyholders**](/docs/protocol/policy-holder) in [**Options**](../OptionFarming) for staking their [**Policies**](./PolicyManager).
+Rewards **Policyholders** in **Options* for staking their [**Policies**](./PolicyManager).
 
-Over the course of `startTime` to `endTime`, the farm distributes `rewardPerSecond` [**Options**](../OptionFarming) to all farmers split relative to the amount of [**SCP**](../Vault) they have deposited.
+Over the course of `startTime` to `endTime`, the farm distributes `rewardPerSecond` **Options** to all farmers split relative to the amount of [**SCP**](../Vault) they have deposited.
 
-Users can become [**Capital Providers**](/docs/user-guides/capital-provider/cp-role-guide) by depositing **ETH** into the [`Vault`](../Vault), receiving [**SCP**](../Vault) in the process. [**Capital Providers**](/docs/user-guides/capital-provider/cp-role-guide) can then deposit their [**SCP**](../Vault) via [`depositCp()`](#depositcp) or [`depositCpSigned()`](#depositcpsigned). Alternatively users can bypass the [`Vault`](../Vault) and stake their **ETH** via [`depositEth()`](#depositeth).
+Users can become **Capital Providers** by depositing **ETH** into the `Vault`, receiving **SCP** in the process. **Capital Providers** can then deposit their **SCP** via [`depositCp()`](#depositcp) or [`depositCpSigned()`](#depositcpsigned). Alternatively users can bypass the `Vault` and stake their **ETH** via [`depositEth()`](#depositeth).
 
 Users can withdraw their rewards via [`withdrawRewards()`](#withdrawrewards).
 
-Users can withdraw their [**SCP**](../Vault) via [`withdrawCp()`](#withdrawcp).
+Users can withdraw their **SCP** via [`withdrawCp()`](#withdrawcp).
 
-Note that transferring in **ETH** will mint you shares, but transferring in **WETH** or [**SCP**](../Vault) will not. These must be deposited via functions in this contract. Misplaced funds cannot be rescued.
+Note that transferring in **ETH** will mint you shares, but transferring in **WETH** or **SCP** will not. These must be deposited via functions in this contract. Misplaced funds cannot be rescued.
 
 
 ## Functions
